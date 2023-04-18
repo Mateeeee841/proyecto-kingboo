@@ -1,0 +1,440 @@
+/* siempre empezar a trabajar el sitio en su vercion de dispositivo movil 
+400 px para movil
+*/
+@font-face {
+    font-family: "spooky-letra";
+    src: url("/fonts/SedgwickAveDisplay-Regular.ttf");
+}
+
+h1 img {
+    width: 40px;
+    height: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.lupa {
+    width: 14px;
+    height: 10px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    /* background-color: darkmagenta; */
+    background: linear-gradient(45deg, #5D0A5D, #39024C, #39024C, #5D0A5D,rgb(126, 107, 1));
+    color: black;
+}
+
+
+.galeria__titulo{
+    text-align: center;
+}
+
+
+/* --------------------HEADER-------------------- */
+.barra-busqueda input {
+    border: solid magenta 3px;
+}
+
+.header {
+    background-color: black;
+    border: solid;
+    padding: 10px;
+}
+
+.titulo {
+
+    color: rgb(87, 3, 3);
+    padding: 8px;
+    font-family: spooky-letra;
+}
+
+.titulo h1 {
+    text-align: center;
+    background-color: gold;
+    border: rgb(187, 142, 27) solid;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+nav li {
+    font-weight: 700;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 1rem;
+    padding: 0.2em;
+}
+
+nav li a {
+    color: ghostwhite;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+nav li a:hover {
+    color: #39024C;
+  }
+
+.barra-busqueda {
+    display: none;
+}
+
+@MEDIA (min-width:745px) {
+
+    .header {
+        background-color: black;
+        border: solid;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .titulo h1 {
+        text-align: center;
+        padding-left: 0%;
+    }
+    .titulo {
+        padding: 8px;
+        grid-column: span 3;
+    }
+
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    nav li {
+        margin-left: 40px;
+    }
+}
+
+
+@MEDIA (min-width:768px) {
+    .titulo h1 {
+        text-align: center;
+        padding-left: 0%;
+    }
+    .barra-busqueda {
+        display: block;
+    }
+    .barra__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .barra-busqueda input {
+        background-color: white;
+
+        width: 150px;
+       
+        margin-top: 0px;
+    }
+}
+@MEDIA (min-width:900px) {
+    .barra__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .barra-busqueda input {
+        width: 290px;
+        margin-top: 0px;
+    }
+}
+@MEDIA (min-width:1200px) {
+    .barra-busqueda input {
+        width: 370px;
+        margin-top: 0px;
+
+    }
+    .barra-busqueda {
+        display: block;
+    }
+    .barra__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+ .titulo h1 {
+        text-align: center;
+        padding-left: 0%;
+    }
+}
+
+/* --------------------MAIN--------------------  */
+
+/* --------------------Index-------------------- */
+
+.portada{
+    background-image: url(https://art.ngfiles.com/images/385000/385059_saucedonkey_king-boo.png?f1446019347);
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: #13011a;
+}
+
+.portada__titulo{
+    color: white;
+    background-color: black;
+    border: solid magenta;
+    font-family: spooky-letra;
+}
+.portada__introduccion{
+    font-size: 1rem;
+    color: white;
+    background-color: black ;
+    width: 50%;
+    text-align: center;
+    border: solid magenta;
+}
+
+/* --------------------Galeria-------------------- */
+.galeria {
+    font-size: 1rem;
+    padding: 2em 1em;
+
+}
+
+.titulo-galeria {
+    padding-bottom: 10px;
+
+}
+
+.galeria h3 {
+    background-color: black;
+    padding: 10px;
+    color: darkmagenta;
+    border: solid white;
+    font-family: spooky-letra;
+}
+
+/* OTRA FORMA DE ORDENARLO */
+/* .contenedor-galeria img{
+    width: 100%;
+    height: 300px;
+} */
+
+.contenedor-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.destacada{
+    padding-bottom: 20px;
+}
+
+.destacada-texto{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: spooky-letra;
+}
+
+.galeria__imagen:hover{
+    filter: invert(10%);
+}
+
+@media (min-width:0px) {
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-template-rows: repeat(2,minmax(100px,200px));
+       
+    }
+    .contenedor-galeria img{
+        width: 100%;
+        height: 92%;
+    }
+    
+    .destacada{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+}
+
+@media (min-width:600px) {
+    .contenedor-galeria img{
+        width: 600px;
+        height: 300px;
+    }
+    .contenedor-galeria{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
+@media (min-width:1024px) {
+    .contenedor-galeria {
+        display: grid;
+        grid-template-columns:repeat(4,0.25fr);
+        grid-template-rows: repeat(2,minmax(100px,200px));
+    }
+    .contenedor-galeria img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .destacada{
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+}
+
+
+
+/* --------------------JUEGOS-------------------- */
+
+.juegos{
+    padding: 40px;
+}
+
+.juegos__titulo{
+    font-family: spooky-letra;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    
+}
+
+.juegos__descripcion{
+    font-size: 1.4em;
+    text-align: center;
+    font-family: spooky-letra;
+    color: black;
+}
+
+.tarjeta{
+    padding-top: 60px;
+    display: grid;
+ 
+}
+
+.tarjeta__titulo{
+    
+    color: cornsilk;
+}
+
+.tarjeta__img{
+    max-width: 50%;
+    height: 100%;
+}
+
+.tarjeta__precio{
+    font-size: 1.6rem;
+    text-decoration: underline;
+    color: gold;
+
+}
+
+.precio__oferta{
+    align-self: last baseline;
+}
+
+.tarjeta__precio--descuento{
+    color: green;
+    align-self: last baseline;
+}
+
+.tarjeta__precio--tachado{
+    font-size: 0.78rem;
+    color: black;
+    text-decoration: line-through;
+    align-self: last baseline;
+    
+}
+
+.btn{
+    height: 90%;
+    width: 50%;
+    align-self: last baseline;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8B0000;
+    border-radius: 2px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+.btn:hover {
+    background-color: #FF4500;
+    cursor: pointer;
+  }
+
+/* --------------------Sugerencias-------------------- */
+.sugerencia{
+    height: 500px;
+    padding: 20px;
+}
+.sugerencia__titulo{
+    text-align: center;
+    font-family: spooky-letra;
+    padding: 20px;
+}
+.sugerencia__form{
+    font-family: spooky-letra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+/* --------------------FOOTER-------------------- */
+
+.footer{
+    padding: 1%;
+    background-color:#13011a;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: repeat(2,1fr);
+}
+
+.footer__sugerencia{
+    grid-row: 1/3;
+}
+
+@MEDIA (min-width:768px) {
+    .footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2,1fr);
+    }
+    .footer__sugerencia{
+        text-align: center;
+    }
+    .footer__link{
+        text-align: center;
+    }
+}
