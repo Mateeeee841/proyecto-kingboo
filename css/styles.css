@@ -65,6 +65,9 @@ body {
     text-align: center;
     background-color: gold;
     border: rgb(187, 142, 27) solid;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem 0;
 }
 
 nav ul {
@@ -178,7 +181,7 @@ nav li a:hover {
         justify-content: center;
     }
 
- .titulo h1 {
+    .titulo h1 {
         text-align: center;
         padding-left: 0%;
     }
@@ -206,6 +209,7 @@ nav li a:hover {
     background-color: black;
     border: solid magenta;
     font-family: spooky-letra;
+    text-align: center;
 }
 .portada__introduccion{
     font-size: 1rem;
@@ -216,6 +220,42 @@ nav li a:hover {
     border: solid magenta;
 }
 
+.kingboo{
+    padding: 10px;
+    
+    font-size: 1.5rem;
+}
+.kingboo__titulo{
+    padding-bottom: 10px;
+    font-family:spooky-letra;
+    color:beige;
+}
+
+.kingboo__descripcion{
+    font-size: 1.2rem;
+    text-align: left;
+    width: 90%;
+    color: #FF4500;
+}
+
+@MEDIA (max-width:768px) {
+    .portada{
+    width: 100%;
+    height: 400px;
+
+    }
+}
+
+@MEDIA (max-width:500px) {
+    .portada{
+    width: 100%;
+    height: 300px;
+
+    }
+    .portada__introduccion{
+        display: none;
+    }
+}
 /* --------------------Galeria-------------------- */
 .galeria {
     font-size: 1rem;
@@ -261,6 +301,21 @@ nav li a:hover {
 .galeria__imagen:hover{
     filter: invert(10%);
 }
+
+.texto-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+.galeria__imagen:hover .texto-imagen {
+    opacity: 1;
+  }
 
 @media (min-width:0px) {
     .contenedor-galeria {
@@ -330,12 +385,15 @@ nav li a:hover {
     text-align: center;
     font-family: spooky-letra;
     color: black;
+    
 }
 
 .tarjeta{
     padding-top: 60px;
-    display: grid;
- 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .tarjeta__titulo{
@@ -344,7 +402,7 @@ nav li a:hover {
 }
 
 .tarjeta__img{
-    max-width: 50%;
+    max-width: 25%;
     height: 100%;
 }
 
@@ -356,26 +414,25 @@ nav li a:hover {
 }
 
 .precio__oferta{
-    align-self: last baseline;
+ 
 }
 
 .tarjeta__precio--descuento{
     color: green;
     align-self: last baseline;
+    
 }
 
 .tarjeta__precio--tachado{
     font-size: 0.78rem;
     color: black;
     text-decoration: line-through;
-    align-self: last baseline;
+
     
 }
 
 .btn{
-    height: 90%;
-    width: 50%;
-    align-self: last baseline;
+    width: 28%;
     display: inline-block;
     font-size: 1rem;
     padding: 0.5em 1em;
@@ -395,6 +452,93 @@ nav li a:hover {
     cursor: pointer;
   }
 
+@MEDIA (max-width:900px) {
+    .btn{
+        width: 38%;
+    }
+
+    .tarjeta__img{
+        max-width: 35%;
+        height: 100%;
+    }
+  }
+
+/* --------------------MAS-------------------- */
+
+.masPersonajes{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.masPersonajes__descripcion{
+    display: flex;
+    align-self: center;
+    width: 60%;
+    font-size: 1.24rem;
+}
+
+.masPersonajes__titulo{
+    text-align: center;
+    font-size: 2rem;
+    font-family: spooky-letra;
+    margin-top: 5%;
+}
+
+.masPersonajes__personaje{
+    
+    margin-top: 50px;
+    border: solid;
+    width: 45%;
+    display: grid;
+    grid-template-columns:repeat(2,0.5fr);
+    grid-template-rows: 0.2fr 1fr
+    
+}
+
+
+.personaje__titulo{
+    grid-column: span 2;
+    text-align: center;
+    color: aliceblue;
+    font-family: spooky-letra;
+    margin-bottom: 5%;
+    border: solid ;
+}
+
+.personaje__descripcion{
+  padding: 5px;
+}
+
+.personaje__imagen{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: solid;
+
+}
+
+
+@MEDIA (max-width:780px) {
+        .masPersonajes__personaje{
+            width: 60%;
+        }
+        .masPersonajes__descripcion{
+            display: flex;
+            align-self: center;
+            width: 80%;
+            font-size: 1.24rem;
+        }
+  }
+
+@MEDIA (max-width:500px) {
+    .masPersonajes__personaje{
+        width: 90%;
+    }
+}
 /* --------------------Sugerencias-------------------- */
 .sugerencia{
     height: 500px;
