@@ -1,0 +1,142 @@
+.header {
+    background-color: black;
+    border: solid;
+    padding: 10px;
+
+    &__titulo{
+        color: rgb(87, 3, 3);
+        padding: 8px;
+        font-family: $spooky;
+    }
+
+    &__titulo h1{
+        text-align: center;
+        background-color: gold;
+        border: rgb(187, 142, 27) solid;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem 0; 
+    }
+}
+
+
+.nav{
+    &__container{
+        @include flex-box(space-around)
+    }
+
+    &__item{
+        font-weight: 700;
+        background-color: black;
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+        font-size: 1rem;
+        padding: 0.2em;
+    }
+
+    &__item a{
+        color: ghostwhite;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+    }
+
+
+    &__item a:hover {
+        color: #39024C;
+      }
+}
+
+
+.barra {
+    display: none;
+
+    &__busqueda input{
+        border: solid $color-primario 3px;
+}
+    
+}
+
+.lupa {
+    width: 14px;
+    height: 10px;
+}
+
+@MEDIA (min-width:745px) {
+
+    .header {
+        background-color: black;
+        border: solid;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+
+        &__titulo {
+            padding: 8px;
+            grid-column: span 3;
+        }
+
+        &__titulo h1 {
+            text-align: center;
+            padding-left: 0%;
+        }
+    
+    }
+    
+    .nav {
+        @include flex-box(space-around,center);
+ 
+        &__item{
+            margin-left: 40px; 
+        }
+    }
+
+}
+
+
+@MEDIA (min-width:768px) {
+    .header__titulo h1 {
+        text-align: center;
+        padding-left: 0%;
+    }
+
+    .barra{
+        @include flex-box();
+
+        &__busqueda {
+            display: block;
+        }
+
+        &__busqueda input {
+            background-color: white;
+    
+            width: 150px;
+           
+            margin-top: 0px;
+        }
+    }
+
+}
+@MEDIA (min-width:900px) {
+    .barra__busqueda input {
+        width: 290px;
+        margin-top: 0px;
+    }
+}
+@MEDIA (min-width:1200px) {
+    .barra__busqueda {
+        display: block;
+
+        & input {
+            width: 370px;
+            margin-top: 0px;
+    
+        }
+    }
+
+    .header__titulo h1 {
+        text-align: center;
+        padding-left: 0%;
+    }
+}

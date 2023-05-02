@@ -17,27 +17,28 @@
 <body>
 
     <header class="header">
-        <div class="titulo">
+        <div class="header__titulo">
             <h1>KING BOO <img src="/img/sprite.png" alt=""></h1>
         </div>
 
 
-        <nav>
+        <nav class="nav">
 
-            <ul>
-                <li> <a href="/index.html">Inicio</a> </li>
-                <li> <a href="/pages/galeria.html">Galeria</a> </li>
-                <li> <a href="/pages/juegos.html">Juegos</a> </li>
-                <li> <a href="/pages/mas.html">Mas</a> </li>
+            <ul class="nav__container">
+                <li class="nav__item"> <a href="/index.html">Inicio</a> </li>
+                <li class="nav__item"> <a href="/pages/galeria.html">Galeria</a> </li>
+                <li class="nav__item"> <a href="/pages/juegos.html">Juegos</a> </li>
+                <li class="nav__item"> <a href="/pages/mas.html">Mas</a> </li>
             </ul>
 
         </nav>
-        
-        <div class="barra__container">
-            <form action="" class="barra-busqueda">
+
+        <div class="barra">
+            <form action="" class="barra__busqueda">
                 <input type="search" placeholder="Buscar...">
-                <span><button type="submit" value="buscar" class="boton"><img src="/img/lupa.png" alt=""
-                        class="lupa"></button></span>
+
+                <button type="submit" value="buscar" class="barra_boton"><img src="/img/lupa.png" alt=""
+                        class="lupa"></button>
             </form>
         </div>
 
@@ -48,48 +49,41 @@
 
         <section class="galeria">
 
-            <div class="titulo-galeria">
+            <div class="galeria__titulocontenedor">
                 <h3 class="galeria__titulo">KING BOO A TRAVEZ DEL TIEMPO </h3>
             </div>
 
-            <div class="contenedor-galeria">
-                <figure class="destacada">
+            <div class="galeria__contenedor">
+                <figure class="galeria__destacada">
                     <img src="https://i.ytimg.com/vi/9kxj5Xnkie0/maxresdefault.jpg" alt="">
-                    <figcaption class="destacada-texto">"King Boo en mario party 10"</figcaption>
+                    <figcaption class="galeria__destacada--texto">"King Boo en mario party 10"</figcaption>
                 </figure>
 
                 <article class="galeria__imagen" >
                     <img src="https://i.ytimg.com/vi/iL8N9eYC7lQ/hqdefault.jpg" alt="">
-                    <div class="texto-imagen">Luigi's Mansion, primera aparición de King Boo en un juego</div>
+                    <div class="galeria__imagen--texto">Luigi's Mansion, primera aparición de King Boo en un juego</div>
                 </article>
 
 
                 <article class="galeria__imagen" >
                     <img src="https://i.ytimg.com/vi/SVSqU6MYHQE/maxresdefault.jpg" alt="">
-                    <div class="texto-imagen">En Mario Kart 8 Deluxe, King Boo regresa a ser personaje jugable pese a no haber aparecido en el Mario Kart 8 original.</div>
+                    <div class="galeria__imagen--texto">En Mario Kart 8 Deluxe, King Boo regresa a ser personaje jugable pese a no haber aparecido en el Mario Kart 8 original.</div>
                 </article>
 
 
               
                 <article class="galeria__imagen" >
                     <img src="https://mariopartylegacy.com/wp-content/uploads/2013/03/lmdmboo7.png" alt="">
-                    <div class="texto-imagen">En Mario Party 8,King Boo aparece en la Mansión Maldita del Rey Boo.</div>
+                    <div class="galeria__imagen--texto">En Mario Party 8,King Boo aparece en la Mansión Maldita del Rey Boo.</div>
                 </article>
 
 
                
                 <article class="galeria__imagen" >
                     <img src="https://media.vandal.net/master/11-2019/201911620241524_1.jpg" alt="">
-                    <div class="texto-imagen">Luigi's Mansion 2 es un videojuego para la consola Nintendo 3DS desarrollado por Next Level Games y no por Nintendo</div>
+                    <div class="galeria__imagen--texto">Luigi's Mansion 2 es un videojuego para la consola Nintendo 3DS desarrollado por Next Level Games y no por Nintendo</div>
                 </article>
-              
 
-                
-
-
-                
-                
-                
 
             </div>
 

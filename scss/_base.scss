@@ -1,0 +1,59 @@
+//Base del proyecto y variables declaradas
+@font-face {
+    font-family: "spooky-letra";
+    src: url("/fonts/SedgwickAveDisplay-Regular.ttf");
+}
+
+$color-primario: magenta;
+$color-descripcion: #FF4500;
+$spooky: "spooky-letra";
+
+// @mixin flex-center{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+@mixin flex-box($justify:center,$align:center){
+     display: flex;
+     justify-content: $justify;
+     align-items: $align;
+}
+
+// .contenedor{
+//     @include flex-box(center,stretch)
+// }
+// .contenedorB{
+//     @include flex-box()
+// }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 img {
+    width: 40px;
+    height: 40px;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(45deg, #5D0A5D, #39024C, #39024C, #5D0A5D,rgb(126, 107, 1));
+    color: black;
+}
+
+
+

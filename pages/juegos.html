@@ -17,43 +17,47 @@
 <body>
 
     <header class="header">
-        <div class="titulo">
+        <div class="header__titulo">
             <h1>KING BOO <img src="/img/sprite.png" alt=""></h1>
         </div>
 
 
-        <nav>
+        <nav class="nav">
 
-            <ul>
-                <li> <a href="/index.html">Inicio</a> </li>
-                <li> <a href="/pages/galeria.html">Galeria</a> </li>
-                <li> <a href="/pages/juegos.html">Juegos</a> </li>
-                <li> <a href="/pages/mas.html">Mas</a> </li>
+            <ul class="nav__container">
+                <li class="nav__item"> <a href="/index.html">Inicio</a> </li>
+                <li class="nav__item"> <a href="/pages/galeria.html">Galeria</a> </li>
+                <li class="nav__item"> <a href="/pages/juegos.html">Juegos</a> </li>
+                <li class="nav__item"> <a href="/pages/mas.html">Mas</a> </li>
             </ul>
 
         </nav>
-        <div class="barra__container">
-            <form action="" class="barra-busqueda">
+
+        <div class="barra">
+            <form action="" class="barra__busqueda">
                 <input type="search" placeholder="Buscar...">
 
-                <button type="submit" value="buscar" class="boton"><img src="/img/lupa.png" alt=""
+                <button type="submit" value="buscar" class="barra_boton"><img src="/img/lupa.png" alt=""
                         class="lupa"></button>
             </form>
         </div>
+
 
     </header>
 
     <main>
 
-        <section class="container juegos">
+        <section class="juegos">
             <h2 class="juegos__titulo">Los mejores juegos de King Boo</h2>
-            <p class="juegos__descripcion">¡Hazte con los juegos más escalofriantes en los que aparece King Boo! Aquí encontrarás una selección de los títulos más populares de la franquicia de Mario en los que este villano aparece, desde su primera aparición en "Luigi's Mansion" hasta sus últimas travesuras</p>
+            <p class="juegos__descripcion">¡Hazte con los juegos más escalofriantes en los que aparece King Boo! Aquí
+                encontrarás una selección de los títulos más populares de la franquicia de Mario en los que este villano
+                aparece, desde su primera aparición en "Luigi's Mansion" hasta sus últimas travesuras</p>
             <article class="tarjeta">
-                    <h3 class="tarjeta__titulo">Paper Mario™: The Origami King</h3>
-                    <img src="/img/mariopaper.jpg" alt="" class="tarjeta__img">
-                    <span class="tarjeta__precio">$11.539</span>
-                    <button class="btn"><a class="btn__link"
-                            href="https://www.nintendo.com/es-ar/store/products/paper-mario-the-origami-king-switch/">Comprar</a></button>
+                <h3 class="tarjeta__titulo">Paper Mario™: The Origami King</h3>
+                <img src="/img/mariopaper.jpg" alt="" class="tarjeta__img">
+                <span class="tarjeta__precio">$11.539</span>
+                <button class="btn"><a class="btn__link"
+                        href="https://www.nintendo.com/es-ar/store/products/paper-mario-the-origami-king-switch/">Comprar</a></button>
             </article>
 
             <article class="tarjeta">

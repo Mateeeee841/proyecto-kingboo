@@ -1,0 +1,76 @@
+.masPersonajes{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 10px;
+
+    &__descripcion{
+        display: flex;
+        align-self: center;
+        width: 60%;
+        font-size: 1.24rem;
+        color:$color-descripcion;
+    }
+
+    &__titulo{
+        text-align: center;
+        font-size: 2rem;
+        font-family: $spooky;
+        margin-top: 5%;
+    }
+
+}
+
+.personaje{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border: solid;
+    width: 45%;
+    display: grid;
+    grid-template-columns:repeat(2,0.5fr);
+    grid-template-rows: cover 1fr;
+    
+    &__titulo{
+        grid-column: span 2;
+        text-align: center;
+        color: aliceblue;
+        font-family: spooky-letra;
+        border: solid black;
+        height: fit-content;
+        background-color: $color-descripcion;
+    }
+
+    &__descripcion{
+        padding: 5px;
+        border: solid black;
+        background-color: $color-descripcion;
+        font-family: $spooky;
+      }
+
+    &__imagen{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border: solid;
+      }
+}
+
+@MEDIA (max-width:780px) {
+    .personaje{
+        width: 60%;
+    }
+    .masPersonajes__descripcion{
+        display: flex;
+        align-self: center;
+        width: 80%;
+        font-size: 1.24rem;
+    }
+}
+
+@MEDIA (max-width:550px) {
+    .personaje{
+        width: 90%;
+    }
+}

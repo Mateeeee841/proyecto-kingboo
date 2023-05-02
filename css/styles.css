@@ -1,581 +1,544 @@
-/* siempre empezar a trabajar el sitio en su vercion de dispositivo movil 
-400 px para movil
-*/
 @font-face {
-    font-family: "spooky-letra";
-    src: url("/fonts/SedgwickAveDisplay-Regular.ttf");
+  font-family: "spooky-letra";
+  src: url("/fonts/SedgwickAveDisplay-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 img {
-    width: 40px;
-    height: 40px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.lupa {
-    width: 14px;
-    height: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    /* background-color: darkmagenta; */
-    background: linear-gradient(45deg, #5D0A5D, #39024C, #39024C, #5D0A5D,rgb(126, 107, 1));
-    color: black;
-}
-
-
-.galeria__titulo{
-    text-align: center;
-}
-
-
-/* --------------------HEADER-------------------- */
-.barra-busqueda input {
-    border: solid magenta 3px;
+  background: linear-gradient(45deg, #5D0A5D, #39024C, #39024C, #5D0A5D, rgb(126, 107, 1));
+  color: black;
 }
 
 .header {
-    background-color: black;
-    border: solid;
-    padding: 10px;
+  background-color: black;
+  border: solid;
+  padding: 10px;
+}
+.header__titulo {
+  color: rgb(87, 3, 3);
+  padding: 8px;
+  font-family: "spooky-letra";
+}
+.header__titulo h1 {
+  text-align: center;
+  background-color: gold;
+  border: rgb(187, 142, 27) solid;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem 0;
 }
 
-.titulo {
-
-    color: rgb(87, 3, 3);
-    padding: 8px;
-    font-family: spooky-letra;
+.nav__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__item {
+  font-weight: 700;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1rem;
+  padding: 0.2em;
+}
+.nav__item a {
+  color: ghostwhite;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+.nav__item a:hover {
+  color: #39024C;
 }
 
-.titulo h1 {
-    text-align: center;
-    background-color: gold;
-    border: rgb(187, 142, 27) solid;
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem 0;
+.barra {
+  display: none;
+}
+.barra__busqueda input {
+  border: solid magenta 3px;
 }
 
-nav ul {
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-nav li {
-    font-weight: 700;
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    font-size: 1rem;
-    padding: 0.2em;
-}
-
-nav li a {
-    color: ghostwhite;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
-}
-nav li a:hover {
-    color: #39024C;
-  }
-
-.barra-busqueda {
-    display: none;
+.lupa {
+  width: 14px;
+  height: 10px;
 }
 
 @MEDIA (min-width:745px) {
-
-    .header {
-        background-color: black;
-        border: solid;
-        padding: 10px;
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .titulo h1 {
-        text-align: center;
-        padding-left: 0%;
-    }
-    .titulo {
-        padding: 8px;
-        grid-column: span 3;
-    }
-
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-
-    nav li {
-        margin-left: 40px;
-    }
+  .header {
+    background-color: black;
+    border: solid;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .header__titulo {
+    padding: 8px;
+    grid-column: span 3;
+  }
+  .header__titulo h1 {
+    text-align: center;
+    padding-left: 0%;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav__item {
+    margin-left: 40px;
+  }
 }
-
-
 @MEDIA (min-width:768px) {
-    .titulo h1 {
-        text-align: center;
-        padding-left: 0%;
-    }
-    .barra-busqueda {
-        display: block;
-    }
-    .barra__container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .barra-busqueda input {
-        background-color: white;
-
-        width: 150px;
-       
-        margin-top: 0px;
-    }
+  .header__titulo h1 {
+    text-align: center;
+    padding-left: 0%;
+  }
+  .barra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .barra__busqueda {
+    display: block;
+  }
+  .barra__busqueda input {
+    background-color: white;
+    width: 150px;
+    margin-top: 0px;
+  }
 }
 @MEDIA (min-width:900px) {
-    .barra__container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .barra-busqueda input {
-        width: 290px;
-        margin-top: 0px;
-    }
+  .barra__busqueda input {
+    width: 290px;
+    margin-top: 0px;
+  }
 }
 @MEDIA (min-width:1200px) {
-    .barra-busqueda input {
-        width: 370px;
-        margin-top: 0px;
-
-    }
-    .barra-busqueda {
-        display: block;
-    }
-    .barra__container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .titulo h1 {
-        text-align: center;
-        padding-left: 0%;
-    }
-}
-
-/* --------------------MAIN--------------------  */
-
-/* --------------------Index-------------------- */
-
-.portada{
-    background-image: url(https://art.ngfiles.com/images/385000/385059_saucedonkey_king-boo.png?f1446019347);
-    width: 100%;
-    height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-shadow: #13011a;
-}
-
-.portada__titulo{
-    color: white;
-    background-color: black;
-    border: solid magenta;
-    font-family: spooky-letra;
+  .barra__busqueda {
+    display: block;
+  }
+  .barra__busqueda input {
+    width: 370px;
+    margin-top: 0px;
+  }
+  .header__titulo h1 {
     text-align: center;
+    padding-left: 0%;
+  }
 }
-.portada__introduccion{
-    font-size: 1rem;
-    color: white;
-    background-color: black ;
-    width: 50%;
+.footer {
+  padding: 1%;
+  background-color: #13011a;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.footer__sugerencia {
+  grid-row: 1/3;
+}
+
+@MEDIA (min-width:768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer__sugerencia {
     text-align: center;
-    border: solid magenta;
+  }
+  .footer__link {
+    text-align: center;
+  }
+}
+.portada {
+  background-image: url(https://art.ngfiles.com/images/385000/385059_saucedonkey_king-boo.png?f1446019347);
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  text-shadow: #13011a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portada__titulo {
+  font-size: 2rem;
+  color: white;
+  background-color: black;
+  border: solid magenta;
+  font-family: "spooky-letra";
+  text-align: center;
+}
+.portada__introduccion {
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  width: 50%;
+  text-align: center;
+  border: solid magenta;
 }
 
-.kingboo{
-    padding: 10px;
-    
-    font-size: 1.5rem;
+.kingboo {
+  padding: 10px;
+  font-size: 2rem;
 }
-.kingboo__titulo{
-    padding-bottom: 10px;
-    font-family:spooky-letra;
-    color:beige;
+.kingboo__titulo {
+  padding-bottom: 10px;
+  font-family: "spooky-letra";
+  color: beige;
 }
-
-.kingboo__descripcion{
-    font-size: 1.2rem;
-    text-align: left;
-    width: 90%;
-    color: #FF4500;
+.kingboo__descripcion {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 90%;
+  color: #FF4500;
 }
 
 @MEDIA (max-width:768px) {
-    .portada{
+  .portada {
     width: 100%;
     height: 400px;
-
-    }
-}
-
-@MEDIA (max-width:500px) {
-    .portada{
-    width: 100%;
-    height: 300px;
-
-    }
-    .portada__introduccion{
-        display: none;
-    }
-}
-/* --------------------Galeria-------------------- */
-.galeria {
-    font-size: 1rem;
-    padding: 2em 1em;
-
-}
-
-.titulo-galeria {
-    padding-bottom: 10px;
-
-}
-
-.galeria h3 {
-    background-color: black;
-    padding: 10px;
-    color: darkmagenta;
-    border: solid white;
-    font-family: spooky-letra;
-}
-
-/* OTRA FORMA DE ORDENARLO */
-/* .contenedor-galeria img{
-    width: 100%;
-    height: 300px;
-} */
-
-.contenedor-galeria {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.destacada{
-    padding-bottom: 20px;
-}
-
-.destacada-texto{
+  }
+  .portada__titulo {
     font-size: 1.5rem;
-    text-align: center;
-    font-family: spooky-letra;
-}
-
-.galeria__imagen:hover{
-    filter: invert(10%);
-}
-
-.texto-imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
   }
-
-.galeria__imagen:hover .texto-imagen {
-    opacity: 1;
-  }
-
-@media (min-width:0px) {
-    .contenedor-galeria {
-        display: grid;
-        grid-template-columns:repeat(2,1fr);
-        grid-template-rows: repeat(2,minmax(100px,200px));
-       
-    }
-    .contenedor-galeria img{
-        width: 100%;
-        height: 92%;
-    }
-    
-    .destacada{
-        grid-row: span 1;
-        grid-column: span 2;
-    }
-}
-
-@media (min-width:600px) {
-    .contenedor-galeria img{
-        width: 600px;
-        height: 300px;
-    }
-    .contenedor-galeria{
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-    }
-}
-
-@media (min-width:1024px) {
-    .contenedor-galeria {
-        display: grid;
-        grid-template-columns:repeat(4,0.25fr);
-        grid-template-rows: repeat(2,minmax(100px,200px));
-    }
-    .contenedor-galeria img{
-        width: 100%;
-        height: 100%;
-    }
-    
-    .destacada{
-        grid-row: span 2;
-        grid-column: span 2;
-    }
-}
-
-
-
-/* --------------------JUEGOS-------------------- */
-
-.juegos{
-    padding: 40px;
-}
-
-.juegos__titulo{
-    font-family: spooky-letra;
-    font-size: 2rem;
-    color: black;
-    text-align: center;
-    
-}
-
-.juegos__descripcion{
-    font-size: 1.4em;
-    text-align: center;
-    font-family: spooky-letra;
-    color: black;
-    
-}
-
-.tarjeta{
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.tarjeta__titulo{
-    
-    color: cornsilk;
-}
-
-.tarjeta__img{
-    max-width: 25%;
-    height: 100%;
-}
-
-.tarjeta__precio{
-    font-size: 1.6rem;
-    text-decoration: underline;
-    color: gold;
-
-}
-
-
-.tarjeta__precio--descuento{
-    color: green;
-    align-self: last baseline;
-    
-}
-
-.tarjeta__precio--tachado{
-    font-size: 0.78rem;
-    color: black;
-    text-decoration: line-through;
-
-    
-}
-
-.btn{
-    width: 28%;
-    display: inline-block;
+  .portada__introduccion {
     font-size: 1rem;
-    padding: 0.5em 1em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #8B0000;
-    border-radius: 2px;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
-    
+  }
+  .kingboo {
+    font-size: 1.2rem;
+  }
+  .kingboo__titulo {
+    padding-bottom: 10px;
+  }
+  .kingboo__descripcion {
+    font-size: 0.8rem;
+    width: 90%;
+  }
+}
+@MEDIA (max-width:540px) {
+  .portada {
+    width: 100%;
+    height: 300px;
+  }
+  .portada__titulo {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+  .portada__introduccion {
+    display: none;
+  }
+}
+.galeria {
+  font-size: 1rem;
+  padding: 2em 1em;
+}
+.galeria__titulo {
+  text-align: center;
+}
+.galeria__titulocontenedor {
+  padding-bottom: 10px;
+}
+.galeria h3 {
+  background-color: black;
+  padding: 10px;
+  color: darkmagenta;
+  border: solid white;
+  font-family: "spooky-letra";
+}
+.galeria__contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.galeria__destacada {
+  padding-bottom: 20px;
+}
+.galeria__destacada--texto {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: spooky-letra;
+}
+.galeria__imagen:hover {
+  filter: invert(10%);
+}
+.galeria__imagen:hover .galeria__imagen--texto {
+  opacity: 1;
+}
+.galeria__imagen--texto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.btn:hover {
-    background-color: #FF4500;
-    cursor: pointer;
+@media (min-width: 0px) {
+  .galeria__contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, minmax(100px, 200px));
   }
+  .galeria__contenedor img {
+    width: 100%;
+    height: 92%;
+  }
+  .galeria__destacada {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+}
+@media (min-width: 600px) {
+  .galeria__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .galeria__contenedor img {
+    width: 600px;
+    height: 300px;
+  }
+}
+@media (min-width: 1024px) {
+  .galeria__contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 0.25fr);
+    grid-template-rows: repeat(2, minmax(100px, 200px));
+  }
+  .galeria__contenedor img {
+    width: 100%;
+    height: 100%;
+  }
+  .galeria__destacada {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+.juegos {
+  padding: 40px;
+}
+.juegos__titulo {
+  font-family: "spooky-letra";
+  font-size: 2rem;
+  color: black;
+  text-align: center;
+}
+.juegos__descripcion {
+  font-size: 1.4em;
+  text-align: center;
+  font-family: spooky-letra;
+  color: black;
+}
+
+.tarjeta {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tarjeta__titulo {
+  color: cornsilk;
+}
+.tarjeta__img {
+  max-width: 25%;
+  height: 100%;
+}
+.tarjeta__precio {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: gold;
+}
+.tarjeta__precio--descuento {
+  color: green;
+  align-self: last baseline;
+}
+.tarjeta__precio--tachado {
+  font-size: 0.78rem;
+  color: black;
+  text-decoration: line-through;
+}
+
+.btn {
+  width: 28%;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #8B0000;
+  border-radius: 2px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.btn:hover {
+  background-color: #FF4500;
+  cursor: pointer;
+}
 
 @MEDIA (max-width:900px) {
-    .btn{
-        width: 38%;
-    }
-
-    .tarjeta__img{
-        max-width: 35%;
-        height: 100%;
-    }
+  .btn {
+    width: 38%;
   }
-
-/* --------------------MAS-------------------- */
-
-.masPersonajes{
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    margin: 0 auto;
-    gap: 10px;
+  .tarjeta__img {
+    max-width: 35%;
+    height: 100%;
+  }
+}
+.masPersonajes {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+}
+.masPersonajes__descripcion {
+  display: flex;
+  align-self: center;
+  width: 60%;
+  font-size: 1.24rem;
+  color: #FF4500;
+}
+.masPersonajes__titulo {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "spooky-letra";
+  margin-top: 5%;
 }
 
-.masPersonajes__descripcion{
-    display: flex;
-    align-self: center;
-    width: 60%;
-    font-size: 1.24rem;
+.personaje {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: solid;
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 0.5fr);
+  grid-template-rows: cover 1fr;
 }
-
-.masPersonajes__titulo{
-    text-align: center;
-    font-size: 2rem;
-    font-family: spooky-letra;
-    margin-top: 5%;
+.personaje__titulo {
+  grid-column: span 2;
+  text-align: center;
+  color: aliceblue;
+  font-family: spooky-letra;
+  border: solid black;
+  height: fit-content;
+  background-color: #FF4500;
 }
-
-.masPersonajes__personaje{
-    
-    margin-top: 50px;
-    border: solid;
-    width: 45%;
-    display: grid;
-    grid-template-columns:repeat(2,0.5fr);
-    grid-template-rows: 0.2fr 1fr
-    
-}
-
-
-.personaje__titulo{
-    grid-column: span 2;
-    text-align: center;
-    color: aliceblue;
-    font-family: spooky-letra;
-    margin-bottom: 5%;
-    border: solid ;
-}
-
-.personaje__descripcion{
+.personaje__descripcion {
   padding: 5px;
+  border: solid black;
+  background-color: #FF4500;
+  font-family: "spooky-letra";
 }
-
-.personaje__imagen{
+.personaje__imagen {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border: solid;
-
 }
-
 
 @MEDIA (max-width:780px) {
-        .masPersonajes__personaje{
-            width: 60%;
-        }
-        .masPersonajes__descripcion{
-            display: flex;
-            align-self: center;
-            width: 80%;
-            font-size: 1.24rem;
-        }
+  .personaje {
+    width: 60%;
   }
-
-@MEDIA (max-width:500px) {
-    .masPersonajes__personaje{
-        width: 90%;
-    }
-}
-/* --------------------Sugerencias-------------------- */
-.sugerencia{
-    height: 500px;
-    padding: 20px;
-}
-.sugerencia__titulo{
-    text-align: center;
-    font-family: spooky-letra;
-    padding: 20px;
-}
-.sugerencia__form{
-    font-family: spooky-letra;
+  .masPersonajes__descripcion {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    align-self: center;
+    width: 80%;
+    font-size: 1.24rem;
+  }
 }
-/* --------------------FOOTER-------------------- */
+@MEDIA (max-width:550px) {
+  .personaje {
+    width: 90%;
+  }
+}
+.sugerencia {
+  height: 900px;
+  padding: 20px;
+}
+.sugerencia__titulo {
+  text-align: center;
+  font-family: "spooky-letra";
+  padding: 20px;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.sugerencia__form {
+  font-family: "spooky-letra";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FF4500;
+  font-size: 2rem;
+}
+.sugerencia__form--text {
+  width: 50%;
+  height: 30px;
+  margin-bottom: 7%;
+}
+.sugerencia__form--btn {
+  width: 40%;
+  height: 50px;
+  background-color: gold;
+  border: none;
+  border-radius: 10px;
+  color: rgb(87, 3, 3);
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-.footer{
-    padding: 1%;
-    background-color:#13011a;
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    grid-template-rows: repeat(2,1fr);
+@media (min-width: 550px) {
+  .sugerencia {
+    height: 650px;
+  }
+  .sugerencia__titulo {
+    padding: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+  }
+  .sugerencia__form {
+    font-size: 2rem;
+  }
+  .sugerencia__form--text {
+    width: 70%;
+    height: 30px;
+    margin-bottom: 5%;
+  }
+  .sugerencia__form--btn {
+    width: 28%;
+    height: 50px;
+    font-size: 1rem;
+  }
 }
 
-.footer__sugerencia{
-    grid-row: 1/3;
-}
-
-@MEDIA (min-width:768px) {
-    .footer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(2,1fr);
-    }
-    .footer__sugerencia{
-        text-align: center;
-    }
-    .footer__link{
-        text-align: center;
-    }
-}
+/*# sourceMappingURL=styles.css.map */
