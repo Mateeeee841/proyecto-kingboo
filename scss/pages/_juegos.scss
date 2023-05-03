@@ -1,54 +1,56 @@
-.juegos{
+.juegos {
     padding: 40px;
-    &__titulo{
+
+    &__titulo {
         font-family: $spooky;
         font-size: 2rem;
         color: black;
         text-align: center;
     }
-    &__descripcion{
+
+    &__descripcion {
         font-size: 1.4em;
         text-align: center;
         font-family: spooky-letra;
         color: black;
-        
-    }   
+
+    }
 }
 
-.tarjeta{
+.tarjeta {
     padding-top: 60px;
-    @include flex-box(center,center);
+    @include flex-box(center, center);
     flex-direction: column;
 
-    &__titulo{
+
+    &__titulo {
         color: cornsilk;
     }
 
-    &__img{
+    &__img {
         max-width: 25%;
         height: 100%;
     }
 
-    &__precio{
+    &__precio {
         font-size: 1.6rem;
         text-decoration: underline;
         color: gold;
 
-        &--descuento{
+        &--descuento {
             color: green;
-            align-self: last baseline;
         }
 
-        &--tachado{
+        &--tachado {
             font-size: 0.78rem;
             color: black;
             text-decoration: line-through;
-        
+
         }
     }
 }
 
-.btn{
+.btn {
     width: 28%;
     display: inline-block;
     font-size: 1rem;
@@ -60,20 +62,33 @@
     border: none;
     text-align: center;
     text-decoration: none;
+    transition-property: width transform;
     transition: background-color 0.3s ease-in-out;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
     &:hover {
         background-color: #FF4500;
         cursor: pointer;
-      }
+
+        border-radius: 25px;
+    }
 }
 
 @MEDIA (max-width:900px) {
-    .btn{
+    .btn {
         width: 38%;
+
+        &:hover {
+            background-color: #FF4500;
+            cursor: pointer;
+
+            border-radius: 25px;
+        }
     }
 
-    .tarjeta__img{
+    .tarjeta__img {
         max-width: 35%;
         height: 100%;
     }
-  }
+}

@@ -2,14 +2,14 @@
     font-size: 1rem;
     padding: 2em 1em;
 
-    &__titulo{
+    &__titulo {
         text-align: center;
     }
 
     &__titulocontenedor {
         padding-bottom: 10px;
     }
-    
+
     & h3 {
         background-color: black;
         padding: 10px;
@@ -24,23 +24,24 @@
         gap: 20px;
     }
 
-    &__destacada{
+    &__destacada {
         padding-bottom: 20px;
 
-        &--texto{
+        &--texto {
             font-size: 1.5rem;
             text-align: center;
             font-family: spooky-letra;
         }
     }
-    &__imagen{
 
-        &:hover{
+    &__imagen {
+
+        &:hover {
             filter: invert(10%);
 
-                & .galeria__imagen--texto {
-                    opacity: 1;
-                }
+            & .galeria__imagen--texto {
+                opacity: 1;
+            }
         }
 
         &--texto {
@@ -52,23 +53,25 @@
             padding: 10px;
             opacity: 0;
             transition: opacity 0.5s ease;
-          }
+        }
     }
-     
+
 }
 
 @media (min-width:0px) {
-    .galeria{
+    .galeria {
         &__contenedor {
             display: grid;
-            grid-template-columns:repeat(2,1fr);
-            grid-template-rows: repeat(2,minmax(100px,200px));
-           & img{
-            width: 100%;
-            height: 92%;
-           }
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, minmax(100px, 200px));
+
+            & img {
+                width: 100%;
+                height: 92%;
+            }
         }
-        &__destacada{
+
+        &__destacada {
             grid-row: span 1;
             grid-column: span 2;
         }
@@ -76,33 +79,36 @@
 }
 
 @media (min-width:600px) {
-    .galeria{
+    .galeria {
         &__contenedor {
             display: flex;
             flex-wrap: wrap;
             align-content: center;
-           & img{
-            width: 600px;
-            height: 300px;
-           }
+
+            & img {
+                width: 600px;
+                height: 300px;
+            }
         }
     }
-    
- 
+
+
 }
 
 @media (min-width:1024px) {
-    .galeria{
+    .galeria {
         &__contenedor {
             display: grid;
-            grid-template-columns:repeat(4,0.25fr);
-            grid-template-rows: repeat(2,minmax(100px,200px));
-           & img{
-            width: 100%;
-            height: 100%;
-           }
+            grid-template-columns: repeat(4, 0.25fr);
+            grid-template-rows: repeat(2, minmax(100px, 200px));
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
         }
-        &__destacada{
+
+        &__destacada {
             grid-row: span 2;
             grid-column: span 2;
         }

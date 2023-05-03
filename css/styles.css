@@ -27,6 +27,23 @@ body {
   color: black;
 }
 
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   background-color: black;
   border: solid;
@@ -38,12 +55,13 @@ body {
   font-family: "spooky-letra";
 }
 .header__titulo h1 {
+  text-shadow: 0px 2px 4px #000;
   text-align: center;
   background-color: gold;
   border: rgb(187, 142, 27) solid;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  padding: 1rem 0;
+  background: linear-gradient(to right, #FF4500, gold);
 }
 
 .nav__container {
@@ -145,16 +163,49 @@ body {
     padding-left: 0%;
   }
 }
+footer {
+  background-color: #1a1a1a;
+  padding: 30px 0;
+  font-family: "Roboto", sans-serif;
+}
+
 .footer {
-  padding: 1%;
-  background-color: #13011a;
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__sugerencia {
-  grid-row: 1/3;
+  color: black;
+}
+
+.footer__sugerencia:hover,
+.footer__sugerencia:focus {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+.footer__link {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+.footer__link:last-child {
+  margin-right: 0;
+}
+
+.spooky {
+  color: #ff6600;
+  text-shadow: 0 0 10px #ff6600;
 }
 
 @MEDIA (min-width:768px) {
@@ -188,6 +239,8 @@ body {
   border: solid magenta;
   font-family: "spooky-letra";
   text-align: center;
+  animation-name: aparicion;
+  animation-duration: 1.5s;
 }
 .portada__introduccion {
   font-size: 1.5rem;
@@ -196,6 +249,8 @@ body {
   width: 50%;
   text-align: center;
   border: solid magenta;
+  animation-name: aparicion;
+  animation-duration: 1.5s;
 }
 
 .kingboo {
@@ -374,7 +429,6 @@ body {
 }
 .tarjeta__precio--descuento {
   color: green;
-  align-self: last baseline;
 }
 .tarjeta__precio--tachado {
   font-size: 0.78rem;
@@ -394,16 +448,25 @@ body {
   border: none;
   text-align: center;
   text-decoration: none;
+  transition-property: width transform;
   transition: background-color 0.3s ease-in-out;
+  transition-duration: 1s;
+  transition-timing-function: linear;
 }
 .btn:hover {
   background-color: #FF4500;
   cursor: pointer;
+  border-radius: 25px;
 }
 
 @MEDIA (max-width:900px) {
   .btn {
     width: 38%;
+  }
+  .btn:hover {
+    background-color: #FF4500;
+    cursor: pointer;
+    border-radius: 25px;
   }
   .tarjeta__img {
     max-width: 35%;

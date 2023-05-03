@@ -1,8 +1,8 @@
-.sugerencia{
+.sugerencia {
     height: 900px;
     padding: 20px;
 
-    &__titulo{
+    &__titulo {
         text-align: center;
         font-family: $spooky;
         padding: 20px;
@@ -10,58 +10,58 @@
         margin-bottom: 20px;
     }
 
-    &__form{
+    &__form {
         font-family: $spooky;
         @include flex-box();
         flex-direction: column;
         color: $color-descripcion;
         font-size: 2rem;
 
-        &--text{
+        &--text {
 
             width: 50%;
             height: 30px;
             margin-bottom: 7%;
         }
 
-        &--btn{
+        &--btn {
             width: 40%;
             height: 50px;
             background-color: gold;
             border: none;
             border-radius: 10px;
-            color: rgb(87, 3, 3); 
+            color: rgb(87, 3, 3);
             font-size: 1rem;
             font-weight: 900;
             cursor: pointer;
-           
-            transition: background-color 0.3s ease; 
+
+            transition: background-color 0.3s ease;
         }
     }
 }
 
 
-@media (min-width:550px){
-    .sugerencia{
+@media (min-width:550px) {
+    .sugerencia {
         height: 650px;
 
-        &__titulo{
+        &__titulo {
             padding: 20px;
             font-size: 2.5rem;
             margin-bottom: 0px;
         }
-    
-        &__form{
+
+        &__form {
             font-size: 2rem;
 
-            &--text{
-    
+            &--text {
+
                 width: 70%;
                 height: 30px;
                 margin-bottom: 5%;
             }
-    
-            &--btn{
+
+            &--btn {
                 width: 28%;
                 height: 50px;
                 font-size: 1rem;

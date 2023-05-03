@@ -10,12 +10,13 @@
     }
 
     &__titulo h1{
+        text-shadow: 0px 2px 4px #000;
         text-align: center;
         background-color: gold;
         border: rgb(187, 142, 27) solid;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
-        padding: 1rem 0; 
+        background: linear-gradient(to right, $color-descripcion, gold);
     }
 }
 
