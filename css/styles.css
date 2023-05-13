@@ -509,10 +509,10 @@ footer {
     height: 100%;
   }
 }
-/* Estilos solo para iPhone */
-@media only screen and (min-device-width: 375px) and (max-device-width: 414px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen and (max-device-width: 480px) {
   .tarjeta__img {
-    display: none;
+    max-width: 55vw;
+    height: 55vw;
   }
 }
 .masPersonajes {
