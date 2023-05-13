@@ -62,4 +62,27 @@ body {
         opacity: 1;
     }
 
+
 }
+@keyframes cover {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    60% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
