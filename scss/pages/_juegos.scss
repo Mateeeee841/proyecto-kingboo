@@ -43,8 +43,11 @@
 
         &--tachado {
             font-size: 0.78rem;
-            color: black;
+            color: white;
             text-decoration: line-through;
+            text-decoration-color:black;
+            text-decoration-thickness: 3px;
+            
 
         }
     }
@@ -88,7 +91,7 @@
     }
 
     .tarjeta__img {
-        max-width: 35%;
+        max-width: 55vw;
         height: 100%;
     }
 }

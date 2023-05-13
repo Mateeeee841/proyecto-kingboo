@@ -308,11 +308,25 @@ footer {
   font-size: 1rem;
   padding: 2em 1em;
 }
-.galeria__titulo {
+.galeria__tituloM {
+  display: block;
   text-align: center;
+}
+.galeria__titulo {
+  display: none;
 }
 .galeria__titulocontenedor {
   padding-bottom: 10px;
+}
+.galeria__imagen {
+  margin-bottom: 100px;
+}
+.galeria__imagen--texto {
+  display: none;
+}
+.galeria__imagenM--texto {
+  color: white;
+  padding: 0px;
 }
 .galeria h3 {
   background-color: black;
@@ -334,23 +348,12 @@ footer {
   text-align: center;
   font-family: spooky-letra;
 }
-.galeria__imagen:hover {
-  filter: invert(10%);
-}
-.galeria__imagen:hover .galeria__imagen--texto {
-  opacity: 1;
-}
-.galeria__imagen--texto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 10px;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
 
+@media (min-width: 400px) {
+  .galeria__imagen {
+    margin-bottom: 70px;
+  }
+}
 @media (min-width: 0px) {
   .galeria__contenedor {
     display: grid;
@@ -375,6 +378,37 @@ footer {
   .galeria__contenedor img {
     width: 600px;
     height: 300px;
+  }
+  .galeria__tituloM {
+    display: none;
+  }
+  .galeria__titulo {
+    display: block;
+    text-align: center;
+  }
+  .galeria__imagen {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .galeria__imagen:hover {
+    filter: invert(10%);
+  }
+  .galeria__imagen:hover .galeria__imagen--texto {
+    opacity: 1;
+  }
+  .galeria__imagen--texto {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .galeria__imagenM--texto {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
@@ -432,8 +466,10 @@ footer {
 }
 .tarjeta__precio--tachado {
   font-size: 0.78rem;
-  color: black;
+  color: white;
   text-decoration: line-through;
+  text-decoration-color: black;
+  text-decoration-thickness: 3px;
 }
 
 .btn {
@@ -469,7 +505,7 @@ footer {
     border-radius: 25px;
   }
   .tarjeta__img {
-    max-width: 35%;
+    max-width: 55vw;
     height: 100%;
   }
 }
