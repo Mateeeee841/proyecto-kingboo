@@ -75,3 +75,27 @@
         width: 90%;
     }
 }
+
+
+
+// Solucion problema con iphone
+@media only screen and (max-device-width: 480px) {
+    .personaje {
+        grid-template-columns: repeat(2, 0.5fr);
+        grid-template-rows: repeat(3, 0.5fr) cover;
+    
+        &__titulo {
+            grid-column: span 2;
+        }
+    
+        &__descripcion {
+            grid-column: span 2;
+        }
+    
+        &__imagen {
+            grid-column: span 2;
+        }
+    
+        
+    }
+  }

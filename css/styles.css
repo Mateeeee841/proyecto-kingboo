@@ -584,6 +584,21 @@ footer {
     width: 90%;
   }
 }
+@media only screen and (max-device-width: 480px) {
+  .personaje {
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(3, 0.5fr) cover;
+  }
+  .personaje__titulo {
+    grid-column: span 2;
+  }
+  .personaje__descripcion {
+    grid-column: span 2;
+  }
+  .personaje__imagen {
+    grid-column: span 2;
+  }
+}
 .sugerencia {
   height: 900px;
   padding: 20px;
