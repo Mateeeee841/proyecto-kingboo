@@ -46,15 +46,15 @@ body {
 }
 @keyframes cover {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   25% {
-    opacity: 0.75;
+    opacity: 0;
   }
   60% {
     opacity: 0.5;
   }
-  75% {
+  70% {
     opacity: 0.25;
   }
   100% {
@@ -247,7 +247,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: cover 1.5s forwards;
+  animation: cover 4s forwards;
   pointer-events: none;
 }
 
