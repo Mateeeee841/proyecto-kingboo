@@ -247,7 +247,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: cover 0.8s forwards;
+  animation: cover 1.5s forwards;
   pointer-events: none;
 }
 
